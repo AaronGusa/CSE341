@@ -4,7 +4,6 @@
   "description": "CSE341 - Speed Round",
   "main": "server.js",
   "scripts": {
-    
     "test": "nodemon server.js",
     "start": "node server.js"
   },
