@@ -1,9 +1,15 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 3000
+const express = require('express');
+const connectDB = require('./db/connection');
+const app = express();
 
-app.use('/', require('./routes'))
+connectDB();
+
+app.use('/api/userModel',  require('../api/user'));
+const port = process.env.PORT || 3000;
+
+
+app.use('/', require('./routes'));
 
 app.listen(port, () => {
-    console.log(`Example app listening port ${port}`)
+    console.log(`Example app listening port ${port}`);
 })
